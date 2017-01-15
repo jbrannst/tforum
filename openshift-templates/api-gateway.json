@@ -70,7 +70,7 @@
         "source": {
           "type": "Git",
           "git": {
-            "uri": "https://github.com/jbossdemocentral/coolstore-microservice"
+            "uri": "https://github.com/jbrannst/tforum"
           },
           "contextDir": "api-gateway"
         },
