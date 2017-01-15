@@ -1,0 +1,9 @@
+export OCP_PROJECT=coolstore
+#export OCP_MASTER=openshift-master.ocp.rocks # hostname or IP of the OpenShift Container Platform Master
+#export OCP_DOMAIN=apps.ocp.rocks # DNS domain that maps to your OpenShift Container Platform master
+#export MAVEN_MIRROR_URL=http://nexus-ci.apps.ocp.rocks:8081/repository/maven-public/
+
+export OCP_MASTER=10.1.2.2 # hostname or IP of the OpenShift Container Platform Master
+export OCP_DOMAIN=rhel-cdk.${OCP_MASTER}.xip.io # DNS domain that maps to your OpenShift Container Platform master
+export MAVEN_MIRROR_URL=http://nexus.cicd.svc.cluster.local:8081/content/groups/public/
+
