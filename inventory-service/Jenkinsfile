@@ -5,8 +5,8 @@ node {
     echo 'Checking out git repository'
     git url: 'https://github.com/jbrannst/tforum'
 
-    stage 'Build inventory-service with maven'
-    echo 'Building project'
+    stage 'Setup inventory-service with maven'
+    echo 'Initializing pipeline'
     def mvnHome = tool 'M3'
     def javaHome = tool 'jdk8'
 
@@ -14,9 +14,9 @@ node {
     echo 'Building docker image and deploying to Dev'
     buildProject(env.PROD_PROJECT + '-dev')
 
-    stage 'Automated tests'
-    echo 'This stage simulates automated tests'
-    //sh "${mvnHome}/bin/mvn -f inventory-service -B -Dmaven.test.failure.ignore clean package verify"
+    stage 'Automated acceptance tests'
+    echo 'This stage simulates automated acceptance tests'
+    //sh "${mvnHome}/bin/mvn -f inventory-service-test -B -Dmaven.test.failure.ignore clean verify"
     sh "echo 'this is a custom shellscript'"
 
     stage 'Deploy to QA'
