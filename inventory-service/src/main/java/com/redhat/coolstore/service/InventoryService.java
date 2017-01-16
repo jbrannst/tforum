@@ -13,12 +13,11 @@ public class InventoryService {
 
 	}
 	
-	public Inventory getInventory(String itemId) {
-		String location = CITIES[(int)(Math.floor(Math.random() * CITIES.length))];
-		String link = "http://maps.google.com/?q=" + location.toLowerCase();
-		return new Inventory(itemId,
-				(int)Math.floor(Math.random() * 100),
-				location, link);
-
-	}
+//	public Inventory getInventory(String itemId) {
+//		String location = CITIES[(int)(Math.floor(Math.random() * CITIES.length))];
+//		String link = "http://maps.google.com/?q=" + location.toLowerCase();
+//		return new Inventory(itemId,
+//				(int)Math.floor(Math.random() * 100) + 1,
+//				location, link);
+//	}
 }
