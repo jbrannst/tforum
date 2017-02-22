@@ -44,6 +44,7 @@ def prereqs(String project) {
 // Creates a Build and triggers it
 def buildProject(String project){
     prereqs(project)
+    sh "oc project"
     sh "oc new-app --file=openshift-templates/inventory-service.json -p MAVEN_MIRROR_URL='${env.MAVEN_MIRROR_URL ? env.MAVEN_MIRROR_URL : ""}' || oc start-build inventory-service"
     sh "oc expose service inventory-service || echo 'Service already exposed'"
     sh "oc logs -f bc/inventory-service"
