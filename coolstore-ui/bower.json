@@ -13,10 +13,10 @@
     "imagesloaded": "^4.1.0",
     "angular-route": "1.5.x",
     "keycloak": "^1.9.4",
-    "jquery": "~1.9.1"
+    "jquery": "~2.1.4"
   },
     "resolutions": {
-    "jquery": "~1.9.1"
+    "jquery": "~2.1.4"
   }
 
 }
