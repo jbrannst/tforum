@@ -12,6 +12,7 @@
     "isotope": "^2.2.2",
     "imagesloaded": "^4.1.0",
     "angular-route": "1.5.x",
-    "keycloak": "^1.9.4"
+    "keycloak": "^1.9.4",
+    "jquery": "~1.9.1"
   }
 }
