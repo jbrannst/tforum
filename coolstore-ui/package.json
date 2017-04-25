@@ -3,7 +3,7 @@
   "contributors": [
     "James Falkner <jfalkner@redhat.com> (https://developers.redhat.com)"
   ],
-  "name": "coolstore-microservice",
+  "name": "coolstore-ui",
   "repository": "jbossdemocentral/coolstore-microservice",
   "version": "1.0.0",
   "license": "Apache-2.0",
@@ -15,12 +15,13 @@
     "request": "^2.74.0"
   },
   "devDependencies": {
-    "bower": ">=1.7.9"
+    "bower": ">=1.7.9",
+    "bower-nexus3-resolver" : "*"
   },
   "engines": {
     "node": ">=0.10.10"
   },
   "scripts": {
-    "postinstall": "node_modules/.bin/bower install"
+    "postinstall": "node_modules/.bin/bower --config.registry.search=${BOWER_MIRROR} install"
   }
 }
